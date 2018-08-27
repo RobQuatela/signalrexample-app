@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <title>SignalR Example</title>
+    </head>
+    <body>
+        <p>This will be used for push notifications from the server</p>
+        <input id="userInput" type="text" placeholder="User">
+        <input id="messageInput" type="text" placeholder="Place Message" >
+        <div id="pushMessage"></div>
+        <button id="sendButton">Start Communicating</button>
+        <p>Random push notifications from server</p>
+        <div id="serverEvent"></div>
+    </body>
+    <script src="node_modules/@aspnet/signalr/dist/browser/signalr.js"></script>
+    <script src="index.js"></script>
+</html>

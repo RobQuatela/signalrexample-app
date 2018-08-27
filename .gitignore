@@ -1,0 +1,47 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# compiled output
+signalrexample-client/dist
+signalrexample-client/tmp
+signalrexample-client/out-tsc
+
+# dependencies
+/signalrexample-client/node_modules
+
+# IDEs and editors
+signalrexample-client/.idea
+signalrexample-client/.project
+signalrexample-client/.classpath
+signalrexample-client/.c9/
+signalrexample-client/*.launch
+signalrexample-client/.settings/
+signalrexample-client/*.sublime-workspace
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# misc
+/.sass-cache
+/connect.lock
+/coverage
+/libpeerconnection.log
+npm-debug.log
+yarn-error.log
+testem.log
+/typings
+
+# System Files
+.DS_Store
+Thumbs.db
+
+# dotnet app
+signlarexample/node_modules
+signlarexample/wwwroot/node_modules
+signlarexample/obj/
+signlarexample/bin/
+
+.vscode
