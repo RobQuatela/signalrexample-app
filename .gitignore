@@ -6,7 +6,7 @@ signalrexample-client/tmp
 signalrexample-client/out-tsc
 
 # dependencies
-/signalrexample-client/node_modules
+signalrexample-client/node_modules
 
 # IDEs and editors
 signalrexample-client/.idea
