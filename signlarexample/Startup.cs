@@ -12,6 +12,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using signlarexample.Hubs;
+using signlarexample.Services;
 
 namespace signlarexample
 {
@@ -31,6 +32,9 @@ namespace signlarexample
             services.AddCors(options);
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             services.AddSignalR();
+
+            services.AddDbContext<DatabaseContext>();
+            services.AddScoped<IPushNotificationService, WebPushNotificationService>();
         }
 
         public void SetUp(CorsOptions options)
@@ -59,11 +63,11 @@ namespace signlarexample
             }
 
             app.UseStaticFiles();
-            app.UseCors("CorsPolicy");
-            app.UseSignalR(routes => {
-                routes.MapHub<MessageHub>("/messagehub");
-            });
-            app.UseHttpsRedirection();
+            //app.UseCors("CorsPolicy");
+            // app.UseSignalR(routes => {
+            //     routes.MapHub<MessageHub>("/messagehub");
+            // });
+            //app.UseHttpsRedirection();
             app.UseMvc();
         }
     }
