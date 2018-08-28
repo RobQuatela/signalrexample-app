@@ -15,7 +15,7 @@ namespace signlarexample.Services
         }
         public void SendNotification(string payload)
         {
-            var subscription = this.context.PushSubscription.FirstOrDefault(x => x.Id == 1);
+            var subscription = this.context.PushSubscription.FirstOrDefault(x => x.Id == 2);
             var endpoint = subscription.Endpoint;
             var p256dh = subscription.P256;
             var auth = subscription.Auth;
